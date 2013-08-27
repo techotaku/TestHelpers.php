@@ -10,6 +10,14 @@ class ExitTest extends PHPUnit_Framework_TestCase {
     ExitTestHelper::clean();
   }
 
+  public function testExitAfterPrint() {
+    ExitTestHelper::init();
+    print('normal message.');
+    exit('exit message');
+    $this->assertEquals('normal message.exit message', ExitTestHelper::getFirstExitOutput(), 'Output verification fail!');
+    ExitTestHelper::clean();
+  }
+
   public function testMultipleExit() {
     ExitTestHelper::init();
     exit('exit message 1');
