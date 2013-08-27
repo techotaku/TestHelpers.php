@@ -9,4 +9,4 @@ res=`sudo make install`
 echo "zend_extension =${res##*Installing shared extensions:    }test_helpers.so"
 echo "zend_extension =${res##*Installing shared extensions:    }xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 echo "zend_extension =${res##*Installing shared extensions:    }test_helpers.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-cd ../wechat-sdk.php
+cd ../TestHelpers.php
