@@ -1,5 +1,5 @@
-git clone --branch=master git://github.com/php-test-helpers/php-test-helpers.git php-test-helpers
-cd php-test-helpers
+git submodule update --init
+cd extension
 phpize
 ./configure --enable-test-helpers
 make

@@ -1,4 +1,12 @@
 <?php
+/**
+ * PHP Test Helpers
+ * Unit tests for Exit Test Helper
+ * 
+ * @author     Ian Li <i@techotaku.net>
+ * @copyright  Ian Li <i@techotaku.net>, All rights reserved.
+ * @license    MIT License
+ */
 
   require __DIR__ . '/../src/ExitTestHelper.php';
 
