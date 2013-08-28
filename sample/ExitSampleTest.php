@@ -29,28 +29,28 @@
   ExitTestHelper::clean();
   isTrue('exit message' == $output);
 
-  // testAcceptanceIsTrue() {
+  // testAcceptanceIsTrue
   ExitTestHelper::init();
   exit('exit message');
   $output = ExitTestHelper::isThereExit();
   ExitTestHelper::clean();
   isTrue($output);
 
-  // testAcceptanceIsFalse() {
+  // testAcceptanceIsFalse
   ExitTestHelper::init();
   $var = 'normal action';
   $output = ExitTestHelper::isThereExit();
   ExitTestHelper::clean();
   isTrue(!$output);
 
-  // testGetMessageWhenNoExit() {
+  // testGetMessageWhenNoExit
   ExitTestHelper::init();
   $var = 'normal action';
   $output = ExitTestHelper::getFirstExitOutput();
   ExitTestHelper::clean();
   isTrue('' == $output);
 
-  // testExitAfterPrint() {
+  // testExitAfterPrint
   ExitTestHelper::init();
   print('normal message.');
   exit('exit message');
@@ -58,7 +58,7 @@
   ExitTestHelper::clean();
   isTrue('normal message.exit message' == $output);
 
-  // testMultipleExit() {
+  // testMultipleExit
   ExitTestHelper::init();
   exit('exit message 1');
   exit('second exit');
