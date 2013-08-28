@@ -22,6 +22,7 @@
       self::$have_exit = FALSE;
       self::$first_exit_output = NULL;
       set_exit_overload('ExitTestHelper::exitHandler');
+      ob_start();
     }
 
     /**
@@ -29,6 +30,7 @@
      * Unregister exit handler.
      */
     public static function clean() {
+      ob_end_clean();
       unset_exit_overload();
       self::$have_exit = FALSE;
       self::$first_exit_output = NULL;
@@ -63,9 +65,9 @@
         self::$have_exit = TRUE;
         echo $param ?: '';
         self::$first_exit_output = ob_get_contents();
-        // Prevent output to STDOUT, it will help you to make your PHPUnit output clear.
-        ob_end_clean();
-        ob_start();
+        if (self::$first_exit_output === FALSE) {
+          self::$first_exit_output = '';
+        }
       }
       return FALSE;
     }
