@@ -1,0 +1,3 @@
+[submodule "extension"]
+	path = extension
+	url = git://github.com/php-test-helpers/php-test-helpers.git
