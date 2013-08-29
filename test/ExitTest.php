@@ -33,10 +33,17 @@
       ExitTestHelper::clean();
     }
 
-    public function testGetMessageWhenNoExit() {
+    public function testGetMessageWhenNoExitAndOutput() {
       ExitTestHelper::init();
       $var = 'normal action';
       $this->assertEquals('', ExitTestHelper::getFirstExitOutput(), 'Output verification fail! Output should be empty.');
+      ExitTestHelper::clean();
+    }
+
+    public function testGetMessageWhenNoExitButOutput() {
+      ExitTestHelper::init();
+      echo 'normal action';
+      $this->assertEquals('normal action', ExitTestHelper::getFirstExitOutput(), 'Output verification fail! Output should be normal.');
       ExitTestHelper::clean();
     }
 

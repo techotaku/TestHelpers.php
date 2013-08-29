@@ -4,6 +4,7 @@
  * 
  * @author     Ian Li <i@techotaku.net>
  * @copyright  Ian Li <i@techotaku.net>, All rights reserved.
+ * @link       https://github.com/techotaku/TestHelpers.php
  * @license    MIT License
  */
 
@@ -46,12 +47,19 @@
     }
 
     /**
-     * Returns the output after first exit() was invoked.
+     * Returns all output after first exit() was invoked.
+     * If no exit() was invoked, returns all contents in output buffer.
+     * (This behavior could help you to remove 'ugly' exit() invoking, from your product code.)
      *
      * @return string
      */
     public static function getFirstExitOutput() {
-      return self::$first_exit_output;
+      if (!is_null(self::$first_exit_output))
+        {
+          return self::$first_exit_output;
+        } else {
+          return ob_get_contents();
+        }
     }
 
     /**
