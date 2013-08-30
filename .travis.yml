@@ -7,3 +7,5 @@ php:
 
 before_script:
   - ./test/install-extensions.sh
+
+script: phpunit --coverage-text
