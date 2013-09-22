@@ -1,0 +1,27 @@
+{
+    "name": "techotaku/TestHelpers",
+    "description": "PHP Test Helpers",
+    "keywords": ["helpers"],
+    "homepage": "https://github.com/techotaku/TestHelpers.php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ian LI",
+            "homepage": "http://www.techotaku.net",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/techotaku/TestHelpers.php/issues"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    }
+}
