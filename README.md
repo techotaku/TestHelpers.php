@@ -1,6 +1,6 @@
 # TestHelpers.php
 
-[![Build Status](https://travis-ci.org/techotaku/TestHelpers.php.png?branch=master)](https://travis-ci.org/techotaku/TestHelpers.php)
+[![Build Status](https://travis-ci.org/techotaku/TestHelpers.php.png?branch=master)](https://travis-ci.org/techotaku/TestHelpers.php) [![Coverage Status](https://coveralls.io/repos/techotaku/TestHelpers.php/badge.png?branch=master)](https://coveralls.io/r/techotaku/TestHelpers.php?branch=master)
 
 ## Overview
 Some useful php test helper classes. Wrappers of [test_helpers](https://github.com/php-test-helpers/php-test-helpers).
@@ -30,7 +30,7 @@ APIs:
 Thanks to [test_helpers](https://github.com/php-test-helpers/php-test-helpers), thanks to [its contributors](https://github.com/php-test-helpers/php-test-helpers/graphs/contributors).
 
 ## License
-The MIT License (MIT)
+The MIT License (MIT)  
 Copyright (c) 2013 Ian Li
 
 See LICENSE
